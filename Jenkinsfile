@@ -16,7 +16,7 @@ pipeline {
             steps {
                 echo 'Testing if Jazzy is smart'
                 sh 'mvn clean test'
-                junit '**/target/*.xml'
+                junit '**/target/surefire-reports/*.xml'
 
             }
         }
