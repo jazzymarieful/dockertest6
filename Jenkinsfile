@@ -14,7 +14,10 @@ pipeline {
         }
         stage('Test') {
             steps {
-                echo 'Testing is Jazzy is smart'
+                echo 'Testing if Jazzy is smart'
+                sh 'mvn clean test'
+                junit '**/target/*.xml'
+
             }
         }
         stage('Deploy') {
